@@ -13,7 +13,7 @@
 
     &:hover{
         transform: translateY(-.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        box-shadow: 0 1rem 2rem $shadow-black;
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
@@ -21,14 +21,27 @@
     }
     &:active{
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+        box-shadow: 0 .5rem 1rem $shadow-black;
     }
+
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
+
         &::after {
             background-color: $color-white;
         }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+
+        
     }
 
     &::after {
@@ -64,11 +77,11 @@
     &:hover {
         background-color: $color-primary;
         color: $color-white;
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        box-shadow: 0 1rem 2rem $shadow-black;
         transform: translateY(-2px);
     }
     &:active {
-        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+        box-shadow: 0 .5rem 1rem $shadow-black;
         transform: translateY(0);
     }
 }
